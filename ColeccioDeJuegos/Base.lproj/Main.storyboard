@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2Sy-xd-gKo">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,89 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ColeccioDeJuegos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="LRq-Us-Ddc">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="5Mc-WX-flf">
+                            <connections>
+                                <segue destination="CVI-Gb-yHJ" kind="show" id="zcT-Pi-Fz3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="112.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="6jo-St-Uvk">
+            <objects>
+                <viewController id="CVI-Gb-yHJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nlL-h8-53j">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Sls-nd-gho">
+                                <rect key="frame" x="67" y="108" width="280" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="QDa-QO-ADj"/>
+                                    <constraint firstAttribute="width" constant="280" id="Uv8-RI-xc1"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rtI-5Q-9cc">
+                                <rect key="frame" x="159" y="278" width="97" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HZx-e6-XOX">
+                                <rect key="frame" x="176" y="316" width="63" height="30"/>
+                                <state key="normal" title="Agregar"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Sls-nd-gho" firstAttribute="width" secondItem="rtI-5Q-9cc" secondAttribute="width" id="7fj-wN-vgI"/>
+                            <constraint firstItem="rtI-5Q-9cc" firstAttribute="top" secondItem="Sls-nd-gho" secondAttribute="bottom" constant="20" id="LtU-Ws-AFx"/>
+                            <constraint firstItem="Sls-nd-gho" firstAttribute="centerX" secondItem="nlL-h8-53j" secondAttribute="centerX" id="fIb-C7-76G"/>
+                            <constraint firstItem="HZx-e6-XOX" firstAttribute="top" secondItem="rtI-5Q-9cc" secondAttribute="bottom" constant="20" id="s8j-DW-qBX"/>
+                            <constraint firstItem="Sls-nd-gho" firstAttribute="top" secondItem="vpY-ne-heB" secondAttribute="top" constant="20" id="ule-ZN-ak3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vpY-ne-heB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ki7-Vv-syN">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="camera" id="dfq-uq-k8N"/>
+                            <barButtonItem title="Fotos" id="qw4-3d-OkS"/>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vL0-zn-DPG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1789.8550724637682" y="112.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="N8S-Pf-6wJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2Sy-xd-gKo" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wrn-mh-xmJ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="j88-te-Usf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fCu-5S-ija" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="261" y="118"/>
         </scene>
     </scenes>
 </document>
